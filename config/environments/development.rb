@@ -28,4 +28,12 @@ Myapp::Application.configure do
   config.assets.debug = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.to_prepare do
+    Devise::SessionsController.layout "empty"
+    Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application"   : "empty" }
+    Devise::ConfirmationsController.layout "empty"
+    Devise::UnlocksController.layout "empty"
+    Devise::PasswordsController.layout "empty"
+  end
 end

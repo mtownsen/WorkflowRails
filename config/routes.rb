@@ -1,6 +1,8 @@
 Myapp::Application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
   # You can have the root of your site routed with "root"
   root to: 'dashboards#dashboard_1'
 

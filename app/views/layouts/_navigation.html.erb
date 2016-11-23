@@ -39,9 +39,9 @@
                     <li class="<%= is_active_action('dashboard_5') %>"><%= link_to "Dashboard v.5", dashboards_dashboard_5_path %></li>
                 </ul>
             </li>
-            <li class="<%= is_active_controller('layoutsoptions') %>">
-                <%= link_to layoutsoptions_index_path do %>
-                <i class="fa fa-diamond"></i> <span class="nav-label" data-i18n="nav.layouts">Layouts</span> <span class="label label-primary pull-right">NEW</span>
+            <li class="<%= is_active_controller('appviews') %>">
+                <%= link_to appviews_projects_path do %>
+                <i class="fa fa-diamond"></i> <span class="nav-label" data-i18n="nav.layouts">Projects</span>
                 <% end %>
             </li>
             <li class="<%= is_active_controller('graphs') %>">
@@ -88,7 +88,7 @@
                     <li class="<%= is_active_action('markdown') %>"><%= link_to "Markdown", forms_markdown_path %> </li>
                 </ul>
             </li>
-            <li class="<%= is_active_controller('appviews') %>">
+            <li class="<%= is_active_controller('appviews_old') %>">
                 <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label" data-i18n="nav.appviews">App Views</span>  <span class="pull-right label label-primary">SPECIAL</span></a>
                 <ul class="nav nav-second-level collapse <%= is_active_controller('appviews') %>">
                     <li class="<%= is_active_action('contacts') %>"><%= link_to "Contacts", appviews_contacts_path %> </li>
